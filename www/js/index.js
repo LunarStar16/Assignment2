@@ -31,7 +31,11 @@ function onDeviceReady() {
 }
 
 
+var img;
 
+function preload() {
+    img = loadImage('');
+  }
 
 function setup() {
 
