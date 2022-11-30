@@ -29,3 +29,14 @@ function onDeviceReady() {
     }
 
 }
+
+
+
+
+function setup() {
+
+  }
+  
+function draw() {
+
+}
