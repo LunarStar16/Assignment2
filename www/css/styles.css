@@ -3,19 +3,19 @@
     box-sizing: border-box;
 }
 
-html, body{
+/* html, body{
     min-height: 100vh;
     margin: 0;
-}
+} */
 
-/* body {
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
     background: #2e2e2e;
-} */
+}
 
 img {
     max-width: 100%;
@@ -23,16 +23,16 @@ img {
     
 }
 
-/* .picture{
+.picture{
     display: flex;
     justify-content: center;
     align-content: center;
      grid-template-columns: 1fr;
     grid-template-rows: 1fr; 
     padding: 10px;
-} */
+} 
 
-/* button{
+button{
     position: fixed;
     width: 75%;
     border-radius: 20px;
@@ -49,4 +49,4 @@ img {
     bottom: -40px;
         left: 50%;
         transform: translate(-50%, -50%);
-} */
+}
