@@ -21,7 +21,9 @@ function onDeviceReady() {
             var myNewImage = fileEntry.toURL()
             console.log(myNewImage);
             // do something with URL, assign to src or create an html
-            $("#takePhoto").after("<div class='picture'><img src='" + myNewImage + "'></div>") 
+            // $("#takePhoto").after("<div class='picture'><img src='" + myNewImage + "'></div>") 
+            preload(myNewImage);
+            imageSetup();
         }, onError);
     }
     function onError(message){
@@ -40,18 +42,21 @@ var size = 7 // element size
 var startx = 0 // starting x coordinate
 var starty = 0 // starting y coordinate
 
-function preload() {
-  img = loadImage('img/image0.png'); // preloads Virginia picture!
+function preload(x) {
+  img = loadImage('img/image0.png'); // preloads picture!
+  
+}
+
+function imageSetup(){
+  img.resize(windowWidth, 0); // resizes image to window size
+  img.loadPixels(); // loads image
+  img.updatePixels(); // updates image
 }
 
 function setup() {
     var cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent("p5canvas"); // creates canvas
-
-  img.loadPixels(); // loads image
-  img.resize(windowWidth, 0); // resizes image to window size
-  img.updatePixels(); // updates image
-
+    imageSetup();
 }
 
 
