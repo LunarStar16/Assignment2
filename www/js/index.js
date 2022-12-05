@@ -43,7 +43,8 @@ var startx = 0 // starting x coordinate
 var starty = 0 // starting y coordinate
 
 function preload(x) {
-  img = loadImage('img/image0.png'); // preloads picture!
+  img = loadImage('img/image0.png'); // preloads picture! 
+  // img = loadImage(x);
   
 }
 
