@@ -18,12 +18,11 @@ function onDeviceReady() {
     function onSuccess(imageData) {
         console.log(imageData);
         resolveLocalFileSystemURL(imageData, function (fileEntry) {
-            var myNewImage = fileEntry.toURL()
+            var myNewImage = fileEntry.toURL();
             console.log(myNewImage);
             // do something with URL, assign to src or create an html
-            // $("#takePhoto").after("<div class='picture'><img src='" + myNewImage + "'></div>") 
-            preload(myNewImage);
-            imageSetup();
+            // $("#takePhoto").after("<img src='" + myNewImage + "'>") 
+            // preload(myNewImage);
         }, onError);
     }
     function onError(message){
@@ -43,7 +42,7 @@ var startx = 0 // starting x coordinate
 var starty = 0 // starting y coordinate
 
 function preload(x) {
-  img = loadImage('img/image0.png'); // preloads picture! 
+  img = loadImage('img/test.jpg'); // preloads picture! 
   // img = loadImage(x);
   
 }
@@ -52,12 +51,15 @@ function imageSetup(){
   img.resize(windowWidth, 0); // resizes image to window size
   img.loadPixels(); // loads image
   img.updatePixels(); // updates image
+  image(img, 0, 0);
+  
 }
 
 function setup() {
     var cnv = createCanvas(windowWidth, windowHeight/1.17);
     cnv.parent("p5canvas"); // creates canvas
     imageSetup();
+    
 }
 
 
