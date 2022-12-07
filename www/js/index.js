@@ -55,7 +55,7 @@ function imageSetup(){
 }
 
 function setup() {
-    var cnv = createCanvas(windowWidth, windowHeight);
+    var cnv = createCanvas(windowWidth, windowHeight/1.17);
     cnv.parent("p5canvas"); // creates canvas
     imageSetup();
 }
